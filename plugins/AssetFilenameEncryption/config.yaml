@@ -1,0 +1,17 @@
+id:   AssetFilenameEncryption
+key:  assetfilenameencryption
+name: Asset Filename Encryption
+version: 0.1
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: '<__trans phrase="It encrypt the file name at upload.">'
+l10n_class: AssetFilenameEncryption::L10N
+version: 0.1
+callbacks:
+    cms_asset_upload_path: AssetFilenameEncryption::Plugin::_asset_upload_path
+    cms_upload_file: AssetFilenameEncryption::Plugin::_upload_file
+config_settings:
+    AssetFilenameEncryptionPassPhrase:
+        default: xDFGrtYRTyRTK1%rRxXR$FGRt99YtyZDFfEeT
+    AssetFilenameEncryptionSuffix:
+        default: pdf,xls,xlsx,doc,docx,ppt,pptx
